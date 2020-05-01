@@ -18,7 +18,7 @@ if __name__ == "__main__":
             res = mul(a, b)
             print("{} * {} = {}".format(a, b, res))
         elif (sys.argv[2] == '/'):
-            res = duv(a, b)
+            res = div(a, b)
             print("{} / {} = {}".format(a, b, res))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
