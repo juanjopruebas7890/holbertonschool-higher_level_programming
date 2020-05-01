@@ -21,5 +21,5 @@ if __name__ == "__main__":
             res = duv(a, b)
             print("{} / {} = {}".format(a, b, res))
         else:
-            print("Unknown operator. Available operators: +, -, * and /\n")
+            print("Unknown operator. Available operators: +, -, * and /")
             sys.exit(1)
