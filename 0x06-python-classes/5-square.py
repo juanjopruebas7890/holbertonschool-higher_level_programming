@@ -43,8 +43,12 @@ class Square:
         """ method to find area
         return: area of sqr
         """
+        return (self.__size * self.__size)
+
+    def my_print(self):
+        """ print the square """
         if self.__size == 0:
-            print("")
+            print('')
         else:
             for f in range(self.__size):
                 for c in range(self.__size):
