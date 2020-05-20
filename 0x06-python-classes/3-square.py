@@ -10,8 +10,8 @@ class Square:
     """
     def __init__(self, size=0):
         """ Square initialized
+        
         Arguments:
-
           size: size of the sqr
         return: None
         """
