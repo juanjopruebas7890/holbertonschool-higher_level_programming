@@ -10,7 +10,7 @@ class Square:
     """
     def __init__(self, size=0):
         """ Square initialized
-        
+
         Arguments:
         size: size of the sqr
         return: None
@@ -25,7 +25,7 @@ class Square:
 
     def area(self):
         """ Multiplication to find area
-          
+
         return: area of sqr
         """
         return (self.__size * self.__size)
