@@ -1,0 +1,43 @@
+""" Test for function of printing name """
+
+Import Function:
+       >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+""" print basic names """
+
+    >>> say_my_name("Juan", "Villegas")
+    My name is Juan Villegas
+
+    >>> say_my_name("Max", "Sierra")
+    My name is Max Sierra
+
+""" Int passed """
+
+    >>> say_my_name(69, "Rivillas")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name("Valeria", 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+""" Multiple args """
+
+    >>> say_my_name("I", "like", "pizza")
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+""" list passed """
+
+    >>> say_my_name("Pablo", [1, 2])
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+    >>> say_my_name([4, 8], "Monroy")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
