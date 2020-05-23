@@ -1,0 +1,44 @@
+""" Tests for the text identation """
+
+Import Function:
+       >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+""" IDentation """
+
+    >>> text_indentation("Hello world. Holberton school is any good?")
+    Hello world.
+    <BLANKLINE>
+     Holberton school is any good?
+    <BLANKLINE>
+
+""" ? separator """
+
+    >>> text_indentation("?")
+    ?
+    <BLANKLINE>
+
+""" new line """
+
+    >>> text_indentation("\nHello world?")
+    <BLANKLINE>
+    Hello world?
+    <BLANKLINE>
+
+    >>> text_indentation("Hello wrld.\n")
+    Hello wrld.
+    <BLANKLINE>
+    <BLANKLINE>
+
+""" integer passed """
+
+    >>> text_indentation(883)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+""" 2 arguments """
+
+    >>> text_indentation("lol", "lmfao")
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
