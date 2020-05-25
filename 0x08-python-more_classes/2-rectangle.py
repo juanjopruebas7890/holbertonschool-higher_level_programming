@@ -51,4 +51,6 @@ class Rectangle:
 
     def perimeter(self):
         """ method to find perm """
+        if self.__width == 0 or self.__height == 0:
+            return 0
         return (self.__height + self.__height + self.__width + self.__width)
