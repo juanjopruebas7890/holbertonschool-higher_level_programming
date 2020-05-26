@@ -69,4 +69,4 @@ class Rectangle:
 
     def __del__(self):
         """ will check if something is deleted """
-        print('Bye Rectangle...')
+        print('Bye rectangle...')
