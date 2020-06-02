@@ -1,0 +1,56 @@
+""" test from inherit a list """
+
+Import Function:
+       >>> MyList = __import__('1-my_list').MyList
+
+""" list empty """
+
+    >>> i = MyList(None)
+    Traceback (most recent call last):
+    TypeError: 'NoneType' object is not iterable
+
+""" list is sorted """
+
+    >>> i = MyList([1, 2, 3])
+    >>> print(i)
+    [1, 2, 3]
+
+""" two arg """
+
+    >>> i = MyList([1, 2], [3, 4])
+    Traceback (most recent call last):
+    TypeError: list() takes at most 1 argument (2 given)
+
+""" Names printing """
+
+    >>> i = MyList()
+    >>> i.append("Hello")
+    >>> i.append("World")
+    >>> i.append("Holberton")
+    >>> i.append("School")
+    >>> print(i)
+    ['Hello', 'World', 'Holberton', 'School']
+    >>> i.print_sorted()
+    ['Hello', 'Holberton', 'School', 'World']
+
+""" replace value """
+
+    >>> i[0] = 9
+    >>> print(i)
+    [9, 2, 3]
+
+""" delete pos """
+
+    >>> i.remove(2)
+    >>> print(i)
+    [9, 3]
+
+""" list with number """
+
+    >>> i = MyList()
+    >>> i.append(1)
+    >>> i.append(2)
+    >>> i.append(3)
+    >>> print(i)
+    [1, 2, 3]
+
