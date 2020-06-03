@@ -54,3 +54,51 @@ Import Function:
     >>> print(i)
     [1, 2, 3]
 
+""" list test """
+
+    >>> i = MyList()
+    >>> i.append(1)
+    >>> i.append(2)
+    >>> i.append(3)
+    >>> i.append(4)
+    >>> i.append(5)
+    >>> i.append(6)
+    >>> print(i)
+    [1, 2, 3, 4, 5, 6]
+    >>> i.print_sorted()
+    [1, 2, 3, 4, 5, 6]
+
+    >>> i = MyList()
+    >>> i.append(10)
+    >>> i.append(9)
+    >>> i.append(8)
+    >>> i.append(7)
+    >>> i.append(6)
+    >>> i.append(5)
+    >>> print(i)
+    [10, 9, 8, 7, 6, 5]
+    >>> i.print_sorted()
+    [5, 6, 7, 8, 9, 10]
+    >>> print(i)
+    [10, 9, 8, 7, 6, 5]
+    >>> i = MyList()
+    >>> i.append(-3)
+    >>> i.append(-6)
+    >>> i.append(-40)
+    >>> i.append(-9)
+    >>> i.append(-11)
+    >>> print(i)
+    [-3, -6, -40, -9, -11]
+    >>> i.print_sorted()
+    [-40, -11, -9, -6, -3]
+
+    >>> issubclass(MyList, list)
+    True
+    >>> issubclass(list, MyList)
+    False
+
+    >>> i = MyList()
+    >>> i.print_sorte()
+    []
+
+    
