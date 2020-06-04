@@ -11,7 +11,7 @@ try:
 except:
     myList = []
 
-for arguments in argv[1]:
+for arguments in argv[1:]:
     myList.append(arguments)
 
 save_to_json_file(myList, filename)
