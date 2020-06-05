@@ -3,6 +3,19 @@
 Import Function:
        >>> MyList = __import__('1-my_list').MyList
 
+>>> module_doc = __import__('1-my_list').__doc__
+     >>> print(len(module_doc) > 0)
+     True
+
+     >>> class_doc = __import__('1-my_list').MyList.__doc__
+     >>> print(len(class_doc) > 0)
+     True
+
+     >>> function_doc = __import__('1-my_list').MyList.print_sorted.__doc__
+     >>> print(len(function_doc) > 0)
+     True
+
+
 """ list empty """
 
     >>> i = MyList(None)
@@ -98,7 +111,7 @@ Import Function:
     False
 
     >>> i = MyList()
-    >>> i.print_sorte()
+    >>> i.print_sorted()
     []
 
     
