@@ -1,0 +1,80 @@
+#!/usr/bin/python3
+""" unit test for the base """
+
+
+import unitest
+import json
+import pep8
+from models import Base
+from models import Rectangle
+from models import Square
+
+
+class TestBase(unittest.TestCase):
+    """ Class for the unit test """
+
+    def test_noarg(self):
+        """ no arguments """
+        base1 = Base()
+        self.assertEqual(base1.id, 1)
+        base2 = Base()
+        self.assertEqual(base2.id, 2)
+        base3 = Base()
+        self.assertEqual(base3.id, 3)
+        base4 = Base()
+        self.assertEqual(base4.id, 4)
+        base5 = Base()
+        self.assertEqual(base5.id, 5)
+
+    def test_arg(self):
+        """ disorder args """
+        base1 = Base()
+        self.assertEqual(base1.id, 1)
+        base2 = Base()
+        self.assertEqual(base2.id, 2)
+        base3 = Base()
+        self.assertEqual(base3.id, 3)
+        base4 = Base(10)
+        self.assertEqual(base4.id, 10)
+        base5 = Base()
+        self.assertEqual(base5.id, 4)
+
+    def test_none(self):
+        """ ID is none """
+        base1 = Base(None)
+        self.assertEqual(base1.id, 1)
+        base2 = Base(None)
+        self.assertEqual(base2.id, 2)
+        base3 = Base(None)
+        self.assertEqual(base3.id, 3)
+        base4 = Base(None)
+        self.assertEqual(base4.id, 4)
+        base5 = Base(None)
+        self.assertEqual(base1.id, 1)
+
+    def test_int(self):
+        """ id is int """
+        base1 = Base(3)
+        self.assertEqual(base1.id, 3)
+        base2 = Base(-7)
+        self.assertEqual(base2.id, -7)
+        base3 = Base()
+        self.assertEqual(base3.id, 1)
+        base4 = Base(6)
+        self.assertEqual(base4.id, 6)
+
+class TestDocs(unittest.TestCase):
+    """ check for documentation """
+    def test_docstring(self):
+        """ test for docstring """
+        self.assertTrue(len(Base.__doc__) >= 1)
+
+    def test_classdoc(self):
+        """ test for the class docstring """
+        self.assertTrue(len(Base.__doc__) >= 1)
+
+    def test_pep8(self):
+        """ rest for the pep8 """
+        
+
+    
