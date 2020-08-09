@@ -18,7 +18,7 @@ if __name__ == '__main__':
     Base.metadata.create_all(eng)
     sess = Session(eng)
     states = sess.query(State).first()
-    if state is not None:
+    if states is not None:
         print("{}: {}".format(state.id, state, name))
     else:
         print("Nothing")
