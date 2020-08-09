@@ -15,7 +15,7 @@ if __name__ == '__main__':
     eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format
                         (user, password, database), pool_pre_ping=True)
     Base.metadata.create_all(eng)
-    sess = Session(engine)
+    sess = Session(eng)
     states = sess.query(State).order_by(State.id.asc()).all()
     for state in states:
         print("{}: {}".format(state.id, state.name))
