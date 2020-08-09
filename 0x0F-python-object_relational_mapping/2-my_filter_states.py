@@ -10,7 +10,7 @@ if __name__ == '__main__':
     password = argv[2]
     database = argv[3]
     name = argv[4]
-    q = "SELECT * FROM states WHERE name='{}' ORDERBY id ASC".format(name)
+    q = "SELECT * FROM states WHERE name='{}' ORDER BY id ASC".format(name)
 
     db = MySQLdb.connect(host="localhost", port=3306, user=user,
                          passwd=password, db=database)
