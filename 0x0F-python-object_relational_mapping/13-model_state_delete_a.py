@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Delte an object """
 
+
 import sqlalchemy
 from sys import argv
 from model_state import Base, State
