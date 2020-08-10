@@ -10,14 +10,14 @@ from sqlalchemy import (create_engine)
 
 
 if __name__ == '__main__':
-    
+
     user = argv[1]
     password = argv[2]
     database = argv[3]
 
     eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format
                         (user, password, database), pool_pre_ping=True)
-    
+
     Base.metadata.create_all(eng)
     sess = Session(eng)
     del_ = sess.query(State).order_by(State.id).all()
