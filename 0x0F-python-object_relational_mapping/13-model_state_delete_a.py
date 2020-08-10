@@ -10,6 +10,7 @@ from sqlalchemy import (create_engine)
 
 
 if __name__ == '__main__':
+    
     user = argv[1]
     password = argv[2]
     database = argv[3]
