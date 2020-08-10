@@ -19,7 +19,7 @@ if __name__ == '__main__':
     Base.metadata.create_all(eng)
     sess = Session(eng)
     new_state = sess.query(State).filter_by(id=2).first()
-    new.state.name = 'New Mexico'
+    new_state.name = 'New Mexico'
     sess.add(new_state)
     sess.commit()
     sess.close()
