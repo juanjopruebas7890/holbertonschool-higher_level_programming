@@ -18,8 +18,8 @@ if __name__ == '__main__':
 
     Base.metadata.create_all(eng)
     sess = Session(eng)
-    states = sess.query(State).filter(state.name == states).first()
-    if state is not None:
+    states = sess.query(State).filter(State.name == name).first()
+    if states is not None:
         print("{}: {}".format(states.id, state.name))
     else:
         print("Not found")
