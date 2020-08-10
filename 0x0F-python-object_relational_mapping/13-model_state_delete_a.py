@@ -21,7 +21,7 @@ if __name__ == '__main__':
     Base.metadata.create_all(eng)
     sess = Session(eng)
     del_ = sess.query(State).order_by(State.id).all()
-    for row in del:
+    for row in del_:
         if 'a' in row.name:
             sess.delete(row)
     sess.commit()
