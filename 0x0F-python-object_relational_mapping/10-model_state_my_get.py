@@ -20,7 +20,7 @@ if __name__ == '__main__':
     sess = Session(eng)
     states = sess.query(State).filter(State.name == name).first()
     if states is not None:
-        print("{}: {}".format(states.id, state.name))
+        print("{}".format(states.id))
     else:
         print("Not found")
     sess.close()
