@@ -17,10 +17,10 @@ if __name__ == '__main__':
 
     eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format
                         (user, password, database), pool_pre_ping=True)
-
+    
     Base.metadata.create_all(eng)
     sess = Session(eng)
-    del = sess.query(State).order_by(State.id).all()
+    del_ = sess.query(State).order_by(State.id).all()
     for row in del:
         if 'a' in row.name:
             sess.delete(row)
