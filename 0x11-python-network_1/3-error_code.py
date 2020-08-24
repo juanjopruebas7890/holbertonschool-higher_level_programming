@@ -3,7 +3,7 @@
 
 
 import sys
-from urllib import request, parse, error
+from urllib import request, error
 
 
 if __name__ == '__main__':
